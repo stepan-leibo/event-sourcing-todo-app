@@ -18,6 +18,7 @@
         <module>event-service</module>
         <module>todo-core</module>
         <module>public-api</module>
+        <module>todo-service</module>
     </modules>
 
     <properties>
