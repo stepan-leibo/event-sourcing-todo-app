@@ -1,0 +1,97 @@
+html {
+    overflow: scroll !important;
+}
+body {
+    background-color: #eee;
+    color: #555;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    /*font-size: 14px !important;*/
+    /*line-height: 1.42857143 !important;*/
+    /*height:100%;*/
+    overflow: scroll !important;
+}
+
+.App {
+    /*overflow: scroll;*/
+}
+
+.data-container {
+    max-height: 500px;
+    position: relative;
+    overflow-y: scroll;
+    color: white;
+    /*margin: 0 10px 0 10px*/
+}
+.card {
+}
+.footer {
+    position: static;
+    /*left: 0;*/
+    bottom: 0;
+    /*background-color: red;*/
+    /*color: white;*/
+    /*text-align: center;*/
+}
+.todo-input {
+    background: white;
+    /*box-shadow: none;*/
+    box-shadow: inset 0px 7px 3px -3px rgba(50, 50, 50, 0.05);
+    border-radius: 0 0 8px 8px;
+    border-right-color: rgb(227, 227, 227);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(227, 227, 227);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(227, 227, 227);
+    border-left-style: solid;
+    border-left-width: 1px;
+}
+.card {
+    margin-bottom: 0 !important;
+}
+.header h3 {
+    color:#3498db !important;
+    /*color:#0062ff !important;*/
+    display: inline;
+}
+.project-icon {
+    color:#3498db !important;
+    /*color:#0062ff !important;*/
+    font-size: 0.7em;
+}
+.menu-icon {
+    color:#3498db !important;
+    /*color:#0062ff !important;*/
+    font-size: 2em;
+}
+.sidebar {
+    background-color: #3498db !important;
+}
+.sidebar .sidebar-wrapper {
+    background-color: #3498db !important;
+}
+.card-no-content {
+    margin-bottom: 15px;
+    /*padding-bottom: 10px;*/
+}
+.sidebar-switch {
+    transform: translateY(10%);
+}
+.navbar-default {
+    z-index: 2;
+}
+.main-panel-fullscreen {
+    /*position: relative;*/
+    /*float: right;*/
+    width: 100% !important;
+}
+.main-panel {
+    min-height: calc(100vh - 75px) !important;
+}
+.navbar {
+    margin-bottom: 0px !important;
+}
+.event {
+    white-space: pre-wrap;
+}
