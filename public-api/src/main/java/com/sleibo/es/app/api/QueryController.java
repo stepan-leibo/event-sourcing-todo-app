@@ -1,7 +1,9 @@
 package com.sleibo.es.app.api;
 
 import com.sleibo.es.client.EventServiceClient;
+import com.sleibo.es.client.ProjectServiceClient;
 import com.sleibo.es.client.TodoServiceClient;
+import com.sleibo.es.domain.Project;
 import com.sleibo.es.domain.Todo;
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +23,13 @@ public class QueryController {
 
     private final EventServiceClient eventServiceClient;
     private final TodoServiceClient todoServiceClient;
+    private final ProjectServiceClient projectServiceClient;
 
     @Autowired
     public QueryController() {
         eventServiceClient = new EventServiceClient();
         todoServiceClient = new TodoServiceClient();
+        projectServiceClient = new ProjectServiceClient();
     }
 
     @GetMapping("/events")
@@ -41,5 +45,10 @@ public class QueryController {
     @GetMapping(value = "/todos/{id}", produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<Todo> getTodo(@PathVariable String id) {
         return ResponseEntity.ok(todoServiceClient.getTodo(id));
+    }
+
+    @GetMapping("/projects")
+    public ResponseEntity<List<Project>> getProjects() {
+        return ResponseEntity.ok(projectServiceClient.getProjects());
     }
 }

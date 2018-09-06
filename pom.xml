@@ -19,13 +19,14 @@
         <module>todo-core</module>
         <module>public-api</module>
         <module>todo-service</module>
+        <module>project-service</module>
+        <module>project-data-migration</module>
     </modules>
 
     <properties>
         <kotlin.version>1.2.41</kotlin.version>
         <axon.version>3.2.1</axon.version>
         <lombok.version>1.16.6</lombok.version>
-        <mockito.version>1.9.5</mockito.version>
         <junit.version>4.12</junit.version>
         <spring-boot.version>2.0.2.RELEASE</spring-boot.version>
         <h2.version>1.4.197</h2.version>
@@ -101,6 +102,13 @@
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-all</artifactId>
+                <version>${mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
                 <version>${mockito.version}</version>
                 <scope>test</scope>
             </dependency>
