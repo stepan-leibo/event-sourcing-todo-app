@@ -22,6 +22,7 @@
         <module>project-service</module>
         <module>project-data-migration</module>
         <module>stats-service</module>
+        <module>notifications-service</module>
     </modules>
 
     <properties>
