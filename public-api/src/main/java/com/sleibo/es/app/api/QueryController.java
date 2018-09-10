@@ -2,6 +2,7 @@ package com.sleibo.es.app.api;
 
 import com.sleibo.es.client.EventServiceClient;
 import com.sleibo.es.client.ProjectServiceClient;
+import com.sleibo.es.client.StatsServiceClient;
 import com.sleibo.es.client.TodoServiceClient;
 import com.sleibo.es.domain.Project;
 import com.sleibo.es.domain.Todo;
@@ -14,6 +15,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 
@@ -24,12 +27,14 @@ public class QueryController {
     private final EventServiceClient eventServiceClient;
     private final TodoServiceClient todoServiceClient;
     private final ProjectServiceClient projectServiceClient;
+    private final StatsServiceClient statsServiceClient;
 
     @Autowired
     public QueryController() {
         eventServiceClient = new EventServiceClient();
         todoServiceClient = new TodoServiceClient();
         projectServiceClient = new ProjectServiceClient();
+        statsServiceClient = new StatsServiceClient();
     }
 
     @GetMapping("/events")
@@ -50,5 +55,10 @@ public class QueryController {
     @GetMapping("/projects")
     public ResponseEntity<List<Project>> getProjects() {
         return ResponseEntity.ok(projectServiceClient.getProjects());
+    }
+
+    @GetMapping("/stats")
+    public ResponseEntity<Map<Long, AtomicInteger>> getStats() {
+        return ResponseEntity.ok(statsServiceClient.getStats());
     }
 }

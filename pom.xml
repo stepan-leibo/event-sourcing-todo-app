@@ -21,6 +21,7 @@
         <module>todo-service</module>
         <module>project-service</module>
         <module>project-data-migration</module>
+        <module>stats-service</module>
     </modules>
 
     <properties>

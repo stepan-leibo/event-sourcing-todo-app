@@ -1,6 +1,5 @@
 package com.sleibo.es.stats.handler;
 
-import com.sleibo.es.events.ProjectCreatedEvent;
 import com.sleibo.es.events.TodoCreatedEvent;
 import com.sleibo.es.stats.service.StatsCollectorService;
 import org.axonframework.config.ProcessingGroup;
@@ -11,8 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.time.Instant;
-import java.time.LocalDate;
-import java.time.ZoneId;
 
 @Component
 @ProcessingGroup("stats")
